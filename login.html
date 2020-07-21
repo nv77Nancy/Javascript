@@ -1,0 +1,49 @@
+<html>
+<head>
+<style>
+  body
+{
+    background-color : #000000;
+}
+h1
+{
+    color : #ffffff;
+    text-align : center;
+    font-family: "SIMPSON";
+}
+form {
+    width: 300px;
+    margin: 0 auto;
+    color : #ffffff;
+}
+</style>
+</head>
+<body>
+<script>  
+function valid(){   
+var password=document.myform.password.value;   
+if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myform.email.value))
+{
+    return true;
+} 
+else
+{
+	alert("Enter valid email address");  
+}
+if(password.length<6)
+{  
+  alert("Password must be at least 6 characters long");  
+  return false;  
+}
+}  
+</script>   
+	<h1>Login Form</h1>
+<form name="myform" method="post" action="registration form.html" onsubmit="return valid()" >  
+Email: <input type="email" name="email"><br/> <br>
+Password: <input type="password" name="password"><br/><br>
+<div style="text-align:center">  
+    <input type="submit" />  
+</div>   
+</form>  
+</body>
+</html>
